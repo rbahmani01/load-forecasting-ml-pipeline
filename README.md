@@ -211,6 +211,8 @@ model_trainer:
 
 See full example in [`config/config.yaml`](config/config.yaml)
 
+**Changing features:** When you modify `feature_cols` or `dynamic_features`, the pipeline automatically handles model comparison. If the old best model can't be evaluated with new features, it uses the saved RMSE from `metrics.json`. You don't need to delete the best model unless starting completely fresh.
+
 ---
 
 ## Development

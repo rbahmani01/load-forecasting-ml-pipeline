@@ -28,6 +28,8 @@ model_trainer:
     dynamic_features:
       - "is_holiday"
       - "temperature"
+      # - "humidity"
+      # - "visibility"
     static_features: []
 
 
