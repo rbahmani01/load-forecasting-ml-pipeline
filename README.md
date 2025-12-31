@@ -1,6 +1,11 @@
 # Energy Load Forecasting MLOps Pipeline
 
-![MLOps Load Forecasting](assets/images/mlops_load_forecasting.png)
+<p align="center">
+  <img src="assets/images/mlops_load_forecasting.png" alt="MLOps Load Forecasting" width="800">
+</p>
+<p align="center">
+  <em>MLOps load forecasting pipeline</em>
+</p>
 
 **Production-ready MLOps pipeline for energy load forecasting** using Docker, Airflow, MLflow, and PostgreSQL.
 
@@ -31,6 +36,41 @@ Forecasts electricity consumption for multiple time series using:
 - Supports both production (Airflow) and development (local Python) workflows
 - Automated model selection and evaluation
 - Configuration-driven via `config.yaml`
+
+<p align="center">
+  <img src="assets/images/Docker_1.png" alt="Docker Containers" width="800">
+</p>
+<p align="center">
+  <em>Running containers</em>
+</p>
+
+<p align="center">
+  <img src="assets/images/airflow_1.png" alt="Airflow DAGs" width="800">
+</p>
+<p align="center">
+  <em>Airflow UI</em>
+</p>
+
+<p align="center">
+  <img src="assets/images/MLflow_1.png" alt="MLflow Experiments" width="800">
+</p>
+<p align="center">
+  <em>MLflow tracking experiments and metrics</em>
+</p>
+
+<p align="center">
+  <img src="assets/images/CI.png" alt="CI Workflow" width="800">
+</p>
+<p align="center">
+  <em>CI workflow running automated tests on every push</em>
+</p>
+
+<p align="center">
+  <img src="assets/images/CD.png" alt="CD Workflow" width="800">
+</p>
+<p align="center">
+  <em>CD workflow building and pushing Docker images to Docker Hub</em>
+</p>
 
 ---
 
@@ -94,18 +134,19 @@ source .env
 python3 -m scripts.kaggle_to_db_df_mlf
 ```
 
-![Data Source](assets/images/Data_source.png)
-
-*Sample data loaded from Kaggle Smart Meters dataset*
+<p align="center">
+  <img src="assets/images/Data_source.png" alt="Data Source" width="800">
+</p>
+<p align="center">
+  <em>Sample data loaded from Kaggle Smart Meters dataset</em>
+</p>
 
 **4. Access UIs:**
 
 - **Airflow**: http://localhost:8080 (admin/admin)
 - **MLflow**: http://localhost:5001
 
-![Docker Containers](assets/images/Docker_1.png)
 
-*All containers running successfully*
 
 ---
 
@@ -127,17 +168,12 @@ docker exec energy-airflow-scheduler airflow dags trigger energy_mlops_batch_pre
 
 Or use the Airflow UI at http://localhost:8080
 
-![Airflow DAGs](assets/images/airflow_1.png)
-
-*Airflow UI showing available DAGs*
-
-![Airflow Running](assets/images/airflow_2.png)
-
-*Training pipeline executing in Airflow*
-
-![MLflow Experiments](assets/images/MLflow_1.png)
-
-*MLflow tracking experiments and metrics*
+<p align="center">
+  <img src="assets/images/airflow_2.png" alt="Airflow Running" width="800">
+</p>
+<p align="center">
+  <em>Training pipeline executing in Airflow</em>
+</p>
 
 ### Option 2: From Terminal (Development)
 
@@ -338,10 +374,6 @@ The project includes automated testing and deployment via GitHub Actions.
 - See test results for each commit
 - Coverage reports included
 
-![CI Workflow](assets/images/CI.png)
-
-*CI workflow running automated tests on every push*
-
 **Run tests locally before pushing:**
 
 ```bash
@@ -412,10 +444,6 @@ docker-compose up -d
 - ✅ Clear production versions (v1.0.0, v1.1.0, etc.)
 - ✅ CI still runs on every push to catch bugs early
 - ✅ You control when images are built and published
-
-![CD Workflow](assets/images/CD.png)
-
-*CD workflow building and pushing Docker images to Docker Hub*
 
 **Workflow files:**
 - CI: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
