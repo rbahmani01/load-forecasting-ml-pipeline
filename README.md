@@ -135,11 +135,12 @@ python3 -m scripts.kaggle_to_db_df_mlf
 ```
 
 <p align="center">
-  <img src="assets/images/Data_source.png" alt="Data Source" width="800">
+  <img src="assets/images/Data_source.png" alt="Data Source" width="80%">
 </p>
 <p align="center">
   <em>Sample data loaded from Kaggle Smart Meters dataset</em>
 </p>
+
 
 **4. Access UIs:**
 
